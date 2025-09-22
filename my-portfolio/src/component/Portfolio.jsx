@@ -12,7 +12,7 @@ const PROFILE = {
   linkedin: "https://www.linkedin.com/in/priti-vishwakarma-4282a126b/",
   github: "https://github.com/Priti0903?tab=repositories",
   resumeHref: "/Resume.pdf", // must be inside /public
-  photo: "/images/photo.jpg",      // must be inside /public
+  photo: "/Portfolio/images/photo.jpg",      // must be inside /public
   phone: "+91-9689744822",
   location: "Pimpri, Pune - 411018"
 };
