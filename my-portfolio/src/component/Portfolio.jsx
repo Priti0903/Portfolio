@@ -12,7 +12,7 @@ const PROFILE = {
   linkedin: "https://www.linkedin.com/in/priti-vishwakarma-4282a126b/",
   github: "https://github.com/Priti0903?tab=repositories",
   resumeHref: "/Resume.pdf", // must be inside /public
-  photo: "/Portfolio/images/photo.jpg",      // must be inside /public
+  photo: "/images/photo.jpg",      // must be inside /public
   phone: "+91-9689744822",
   location: "Pimpri, Pune - 411018"
 };
@@ -465,28 +465,28 @@ export function ProjectsSection() {
       desc: "Built using Java & MySQL...",
       tech: ["Java", "MySQL"],
       link: "https://github.com/Priti0903/Projects",
-      image: "/Portfolio/images/bank-management.jpeg"
+      image: "/images/bank-management.jpeg"
     },
     {
       title: "Online Doctor's Appointment System",
       desc: "Developed with PHP, HTML, and CSS. Admins manage schedules. Users book slots.",
       tech: ["PHP", "HTML", "CSS"],
       link: "https://github.com/Priti0903/PHP-Doctor-Appointment-System",
-      image: "/Portfolio/images/doctor-appointment.jpeg"
+      image: "/images/doctor-appointment.jpeg"
     },
     {
       title: "College Event Management",
       desc: "Built with PHP, HTML, CSS and MySQL. Admins manage events. Users get QR codes.",
       tech: ["PHP", "MySQL", "HTML", "CSS"],
       link: "https://github.com/Priti0903/College-Event-Management-System",
-      image: "/Portfolio/images/college-event.jpeg"
+      image: "/images/college-event.jpeg"
     },
     {
       title: "Tourify – Travel Itinerary App",
       desc: "Responsive web app for trip planning including day-wise scheduling and destination management.",
       tech: ["HTML", "CSS", "JavaScript"],
       link: "https://github.com/Priti0903/Tourify-The-Travel-Itinerary",
-      image:"/Portfolio/images/travel.jpeg"
+      image:"/images/travel.jpeg"
     },
   ];
 
