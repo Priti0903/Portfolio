@@ -379,6 +379,8 @@ export function SkillsSection({ scrollContainerRef }) {
     { name: "MySQL", level: 85 },
     { name: "HTML / CSS", level: 80 },
     { name: "JavaScript", level: 75 },
+    { name: "Git & GitHub", level: 80 },
+    { name: "FireBase", level: 80 }
   ];
 
   const soft = [
