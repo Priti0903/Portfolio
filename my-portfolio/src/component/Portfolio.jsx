@@ -586,8 +586,7 @@ function ContactSection() {
   body: JSON.stringify(data),
 });
 
-      });
-
+ 
       const result = await res.json();
       if (res.ok) {
         setSent(true);
