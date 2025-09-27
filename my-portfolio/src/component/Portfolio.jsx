@@ -472,21 +472,21 @@ export function ProjectsSection() {
     {
       title: "Online Doctor's Appointment System",
       desc: "Developed with PHP, HTML, and CSS. Admins manage schedules. Users book slots.",
-      tech: ["PHP", "HTML", "CSS"],
+      tech: ["PHP", "HTML", "CSS","MySQL"],
       link: "https://github.com/Priti0903/PHP-Doctor-Appointment-System",
       image: "/images/doctor-appointment.jpeg"
     },
     {
       title: "College Event Management",
       desc: "Built with PHP, HTML, CSS and MySQL. Admins manage events. Users get QR codes.",
-      tech: ["PHP", "MySQL", "HTML", "CSS"],
+      tech: ["PHP", "HTML", "CSS","MySQL"],
       link: "https://github.com/Priti0903/College-Event-Management-System",
       image: "/images/college-event.jpeg"
     },
     {
       title: "Tourify – Travel Itinerary App",
       desc: "Responsive web app for trip planning including day-wise scheduling and destination management.",
-      tech: ["HTML", "CSS", "JavaScript"],
+      tech: ["React","Vite","HTML", "CSS", "JavaScript","Java","Firebase","Google Places API","OpenWeatherMap","Gemini AI"],
       link: "https://github.com/Priti0903/Tourify-The-Travel-Itinerary",
       image:"/images/travel.jpeg"
     },
