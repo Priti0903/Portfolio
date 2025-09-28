@@ -11,12 +11,11 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "Please provide name, email, and message." });
   }
 
-  // Configure transporter using environment variables
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL_USER, // your Gmail address in Vercel env vars
-      pass: process.env.EMAIL_PASS, // Gmail app password in Vercel env vars
+      user: process.env.EMAIL_USER, 
+      pass: process.env.EMAIL_PASS, 
     },
   });
 
