@@ -543,7 +543,7 @@ export function ProjectsSection() {
 export function AchievementsSection() {
   const list = [
     "Cloud Computing as a Catalyst for Start-up Innovation : Research Paper, International Conference 2025 DYPIMS, Pune.",
-    "HackerRank Certifications in C Programming, C++, Java, Advanced Java, Python, SQL.",
+    "Secured 1st Rank in TechnoCase Case Study and Programming Competition which was held at IICMR college",
     "Secured 1st rank in B.Sc. Computer Science for three consecutive years."
   ];
 
@@ -649,7 +649,7 @@ function ContactSection() {
 export function Footer() {
   return (
     <footer className="px-5 py-5 bg-slate-900/80 text-center text-slate-400 text-xs sm:text-sm border-t border-cyan-600/20">
-      © {new Date().getFullYear()} {PROFILE.name}. All rights reserved.
+      © {new Date().getFullYear()} {PROFILE.name}
     </footer>
   );
 }
