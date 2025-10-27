@@ -638,7 +638,7 @@ function ContactSection() {
             <button type="submit" className="px-3 py-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-sm">Send</button>
             <a href={PROFILE.resumeHref} download className="px-3 py-2 rounded-xl bg-slate-800/60 border border-cyan-600/20 text-sm">Download CV</a>
           </div>
-          {sent && <p className="mt-2 text-xs text-green-300">Message sent!</p>}
+          {sent && <p className="mt-2 text-xs text-green-300">Message sent!, Thank You for your Interest, I will get back to you soon!</p>}
           {error && <p className="mt-2 text-xs text-red-500">{error}</p>}
         </form>
       </div>
