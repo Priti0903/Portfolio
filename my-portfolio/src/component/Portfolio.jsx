@@ -464,31 +464,49 @@ export function ProjectsSection() {
   const projects = [
     {
       title: "Bank Management System",
-      desc: "Built using Java & MySQL...",
+      desc: "Built using Java & MySQL for managing customer accounts, transactions, and admin operations.",
       tech: ["Java", "MySQL"],
       link: "https://github.com/Priti0903/Projects",
-      image: "/images/bank-management.jpeg"
+      image: "/images/bank-management.jpeg",
     },
     {
       title: "Online Doctor's Appointment System",
-      desc: "Developed with PHP, HTML, and CSS. Admins manage schedules. Users book slots.",
-      tech: ["PHP", "HTML", "CSS","MySQL"],
+      desc: "Developed with PHP, HTML, CSS, and MySQL. Users can book appointments and admins manage schedules.",
+      tech: ["PHP", "HTML", "CSS", "MySQL"],
       link: "https://github.com/Priti0903/PHP-Doctor-Appointment-System",
-      image: "/images/doctor-appointment.jpeg"
+      image: "/images/doctor-appointment.jpeg",
     },
     {
       title: "College Event Management",
-      desc: "Built with PHP, HTML, CSS and MySQL. Admins manage events. Users get QR codes.",
-      tech: ["PHP", "HTML", "CSS","MySQL"],
+      desc: "Event management system with QR-based entry, built using PHP, HTML, CSS, and MySQL.",
+      tech: ["PHP", "HTML", "CSS", "MySQL"],
       link: "https://github.com/Priti0903/College-Event-Management-System",
-      image: "/images/college-event.jpeg"
+      image: "/images/college-event.jpeg",
     },
     {
       title: "Tourify – Travel Itinerary App",
-      desc: "Responsive web app for trip planning including day-wise scheduling and destination management.",
-      tech: ["React","Vite","HTML", "CSS", "JavaScript","Java","Firebase","Google Places API","OpenWeatherMap","Gemini AI"],
+      desc: "AI-powered trip planning application with itinerary generation, weather updates, and destination management.",
+      tech: [
+        "React",
+        "Vite",
+        "JavaScript",
+        "Java",
+        "Firebase",
+        "Google Places API",
+        "OpenWeatherMap",
+        "Gemini AI",
+      ],
       link: "https://github.com/Priti0903/Tourify-The-Travel-Itinerary",
-      image:"/images/travel.jpeg"
+      demo: "https://tourify-demo.vercel.app",
+      image: "/images/travel.jpeg",
+    },
+    {
+      title: "Jewellery Website – Frontend",
+      desc: "A modern, responsive jewellery website frontend built using HTML, CSS, JavaScript, and Bootstrap.",
+      tech: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+      link: "https://github.com/Priti0903/Jewellery-website-Frontend",
+      demo: "https://jewellery-website-frontend-eta.vercel.app/",
+      image: "/images/jewellery.jpeg",
     },
   ];
 
@@ -504,36 +522,63 @@ export function ProjectsSection() {
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8">
         My <span className="text-cyan-300">Projects</span>
       </h2>
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
         {projects.map((p, i) => (
-          <a
+          <div
             key={i}
-            href={p.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block rounded-xl bg-slate-900/80 border border-cyan-700 overflow-hidden shadow-lg transform transition-transform hover:scale-105"
+            className="rounded-xl bg-slate-900/80 border border-cyan-700 overflow-hidden shadow-lg transform transition-transform hover:scale-105"
           >
             <div className="h-40 overflow-hidden">
-              <img src={p.image} alt={p.title} className="w-full h-full object-cover object-top" />
+              <img
+                src={p.image}
+                alt={p.title}
+                className="w-full h-full object-cover object-top"
+              />
             </div>
+
             <div className="p-5">
-              <h3 className="text-lg font-semibold text-cyan-400 mb-2">{p.title}</h3>
+              <h3 className="text-lg font-semibold text-cyan-400 mb-2">
+                {p.title}
+              </h3>
+
               <p className="text-slate-300 mb-4 text-sm">{p.desc}</p>
-              <div className="flex flex-wrap gap-2 mb-3">
+
+              <div className="flex flex-wrap gap-2 mb-4">
                 {p.tech.map((tech, idx) => (
                   <span
                     key={idx}
-                    className="bg-cyan-600/50 text-cyan-200 rounded-full px-2.5 py-0.5 text-xs font-medium"
+                    className="bg-cyan-600/40 text-cyan-200 rounded-full px-2.5 py-0.5 text-xs font-medium"
                   >
                     {tech}
                   </span>
                 ))}
               </div>
-              <div className="text-sm text-cyan-400 flex items-center">
-                <Github className="w-4 h-4 mr-2" /> View on GitHub
+
+              <div className="flex items-center gap-3">
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/70 border border-cyan-600/30 text-xs text-cyan-300 hover:bg-slate-800"
+                >
+                  <Github className="w-4 h-4" />
+                  GitHub
+                </a>
+
+                {p.demo && (
+                  <a
+                    href={p.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-1.5 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-xs text-white hover:scale-105 transition-transform"
+                  >
+                    Live Demo
+                  </a>
+                )}
               </div>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </motion.section>
