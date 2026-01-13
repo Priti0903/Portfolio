@@ -7,7 +7,7 @@ import { Github, Linkedin, Mail, Download, Menu } from "lucide-react";
 
 const PROFILE = {
   name: "Priti Vishwakarma",
-  role: "MCA Student | Aspiring Full Stack Developer",
+  role: "MCA Student | Aspiring Full Stack Developer | Aspiring Analyst",
   email: "pritiv.8211@gmail.com",
   linkedin: "https://www.linkedin.com/in/priti-vishwakarma-4282a126b/",
   github: "https://github.com/Priti0903?tab=repositories",
@@ -317,7 +317,7 @@ function AboutSection() {
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed">
             I am {PROFILE.name}, currently pursuing MCA at D.Y. Patil Institute of MCA &amp; Management,
-            Akurdi. I have a strong foundation in programming, algorithms and full-stack development.
+            Akurdi. I have a strong foundation in programming, algorithms and full-stack development and I am actively developing my skills in data analytics to contribute effectively to roles that require both development and analytical thinking.
           </p>
         </div>
         <div className="bg-slate-900/50 backdrop-blur-md border border-cyan-600/20 rounded-2xl p-6">
@@ -380,7 +380,8 @@ export function SkillsSection({ scrollContainerRef }) {
     { name: "HTML / CSS", level: 80 },
     { name: "JavaScript", level: 75 },
     { name: "Git & GitHub", level: 80 },
-    { name: "FireBase", level: 80 }
+    { name: "FireBase", level: 80 },
+    { name: "Linux / Unix", level: 75 }
   ];
 
   const soft = [
@@ -497,7 +498,6 @@ export function ProjectsSection() {
         "Gemini AI",
       ],
       link: "https://github.com/Priti0903/Tourify-The-Travel-Itinerary",
-      demo: "https://tourify-demo.vercel.app",
       image: "/images/travel.jpeg",
     },
     {
