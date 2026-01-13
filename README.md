@@ -1,6 +1,6 @@
 # 🌐 My Portfolio
 
-Welcome to my personal portfolio website — a space where I share my work, skills, and a little bit about who I am.  
+Welcome to my personal portfolio website, a space where I share my work, skills, and a little bit about who I am.  
 👉 [Visit Live Site](https://pritiv-portfolio.vercel.app/)
 
 ---
