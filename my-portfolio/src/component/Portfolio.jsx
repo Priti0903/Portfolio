@@ -47,7 +47,7 @@ export default function Portfolio() {
     function onScroll() {
       const containerRect = container.getBoundingClientRect();
       const containerMid = containerRect.top + container.clientHeight / 2;
-      let current = active;
+      let current = "";
       for (const s of sections) {
         const rect = s.getBoundingClientRect();
         if (rect.top <= containerMid && rect.bottom >= containerRect.top + 20) {
