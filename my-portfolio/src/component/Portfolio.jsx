@@ -8,7 +8,8 @@ import { Github, Linkedin, Mail, Download, Menu } from "lucide-react";
 const PROFILE = {
   name: "Priti Vishwakarma",
   role: "MCA Student | Aspiring Full Stack Developer | Aspiring Analyst",
-  email: "pritiv.8211@gmail.com",
+tagline:
+  "Full-stack software engineer with hands-on experience building REST APIs, responsive web applications, and MySQL-backed systems. Passionate about developing scalable production-ready software.",  email: "pritiv.8211@gmail.com",
   linkedin: "https://www.linkedin.com/in/priti-vishwakarma-4282a126b/",
   github: "https://github.com/Priti0903?tab=repositories",
   resumeHref: "/Resume.pdf", // must be inside /public
@@ -83,11 +84,16 @@ export default function Portfolio() {
           <AboutSection />
         </section>
         <section id="education" className="snap-start">
-          <EducationSection />
-        </section>
-        <section id="skills" className="snap-start">
-          <SkillsSection scrollContainerRef={mainRef} />
-        </section>
+  <EducationSection />
+</section>
+
+<section id="experience" className="snap-start">
+  <ExperienceSection />
+</section>
+
+<section id="skills" className="snap-start">
+  <SkillsSection scrollContainerRef={mainRef} />
+</section>
         <section id="projects" className="snap-start">
           <ProjectsSection />
         </section>
@@ -109,6 +115,7 @@ function Navbar({ onNavigate, active }) {
     { href: "#hero", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#education", label: "Education" },
+    { href: "#experience", label: "Experience" },
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
     { href: "#achievements", label: "Achievements" },
@@ -131,11 +138,11 @@ function Navbar({ onNavigate, active }) {
             key={l.href}
             href={l.href}
             onClick={(e) => handleClick(e, l.href)}
-            className={`transition ${
-              active === l.href.slice(1)
-                ? "text-cyan-300 border-b-2 border-cyan-400 pb-1"
-                : "text-slate-300 hover:text-cyan-300"
-            }`}
+            className={`pb-1 border-b-2 transition-all duration-300 ${
+  active === l.href.slice(1)
+    ? "text-cyan-300 border-cyan-400"
+    : "text-slate-300 border-transparent hover:text-cyan-300 hover:border-cyan-400"
+}`}
           >
             {l.label}
           </a>
@@ -316,16 +323,16 @@ function AboutSection() {
             About <span className="text-cyan-300">Me</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-slate-300 leading-relaxed">
-            I am {PROFILE.name}, currently pursuing MCA at D.Y. Patil Institute of MCA &amp; Management,
-            Akurdi. I have a strong foundation in programming, algorithms and full-stack development and I am actively developing my skills in data analytics to contribute effectively to roles that require both development and analytical thinking.
+            I am {PROFILE.name},currently pursuing my Master of Computer Applications (MCA) at D.Y. Patil Institute of MCA & Management, Akurdi. I specialize in Java, Spring Boot, React, REST APIs, and MySQL with practical experience building full-stack web applications. During my internship at Airtec Solutions, I worked on an AI-powered hospital monitoring platform where I developed responsive React interfaces integrated with Spring Boot APIs. I enjoy solving real-world problems by building scalable and user-friendly software.
           </p>
         </div>
         <div className="bg-slate-900/50 backdrop-blur-md border border-cyan-600/20 rounded-2xl p-6">
           <h3 className="text-cyan-300 text-lg font-semibold mb-3">Highlights</h3>
           <ul className="text-slate-300 space-y-2 list-inside list-disc text-sm sm:text-base md:text-lg">
-            <li>Skilled in algorithms, data structures &amp; problem solving.</li>
-            <li>Experience building full stack applications with Java, React and Node.</li>
-            <li>Strong communicator and collaborative team player.</li>
+            <li>Hands-on experience with Java, Spring Boot & React.</li>
+<li>Built REST APIs and MySQL-backed full-stack applications.</li>
+<li>Internship experience developing production software.</li>
+<li>Strong understanding of OOP, SDLC & Design Patterns.</li>
           </ul>
         </div>
       </div>
@@ -339,7 +346,7 @@ export function EducationSection() {
       title: "MCA",
       place: "D.Y. Patil College of MCA & Management, Akurdi",
       year: "2024 – 2026",
-      detail: "Currently pursuing, 1st Year CGPA: 8.65",
+      detail: "CGPA: 8.88 (Final semester results awaited)",
     },
     { title: "B.Sc. Computer Science", place: "Pune University", year: "2021 – 2024", detail: "CGPA: 9.32" },
     { title: "HSC Science", place: "Nirmal Bethany Jr. College", year: "2019 – 2020", detail: "Percentage: 91.67%" },
@@ -370,19 +377,81 @@ export function EducationSection() {
     </motion.section>
   );
 }
+
+export function ExperienceSection() {
+  const experience = [
+    {
+      company: "Airtec Solutions",
+      role: "Web Developer Intern",
+      duration: "February 2026 – May 2026",
+      points: [
+        "Built the client-facing React.js frontend for AirCare, an AI-powered hospital air quality monitoring platform.",
+        "Developed responsive dashboards for monitoring OT, ICU, and ward environments with real-time data visualization.",
+        "Integrated React components with Spring Boot REST APIs to display live environmental monitoring data.",
+        "Worked directly with clients to understand requirements and translate them into production-ready UI components.",
+        "Performed cross-browser testing, content integration, debugging, and deployment as part of a remote development team."
+      ]
+    }
+  ];
+
+  return (
+    <motion.section
+      id="experience"
+      className="px-8 md:px-16 py-20"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: false }}
+    >
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-10">
+        Work <span className="text-cyan-300">Experience</span>
+      </h2>
+
+      <div className="max-w-4xl mx-auto">
+        {experience.map((exp, index) => (
+          <div
+            key={index}
+            className="bg-slate-900/50 backdrop-blur-md border border-cyan-600/20 rounded-2xl p-6 hover:border-cyan-400 transition"
+          >
+            <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+              <div>
+                <h3 className="text-xl font-semibold text-cyan-300">
+                  {exp.role}
+                </h3>
+                <p className="text-slate-300 font-medium">
+                  {exp.company}
+                </p>
+              </div>
+
+              <span className="text-sm text-slate-400 mt-2 md:mt-0">
+                {exp.duration}
+              </span>
+            </div>
+
+            <ul className="list-disc list-inside space-y-2 text-slate-300 text-sm sm:text-base">
+              {exp.points.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </motion.section>
+  );
+}
 export function SkillsSection({ scrollContainerRef }) {
   const tech = [
-    { name: "C Programming", level: 85 },
-    { name: "C++", level: 75 },
-    { name: "Java / Advanced Java", level: 85 },
-    { name: "Python", level: 80 },
-    { name: "MySQL", level: 85 },
-    { name: "HTML / CSS", level: 80 },
-    { name: "JavaScript", level: 75 },
-    { name: "Git & GitHub", level: 80 },
-    { name: "FireBase", level: 80 },
-    { name: "Linux / Unix", level: 75 }
-  ];
+  { name: "Java", level: 92 },
+  { name: "Spring Boot", level: 88 },
+  { name: "React.js", level: 90 },
+  { name: "JavaScript", level: 85 },
+  { name: "HTML5 / CSS3", level: 90 },
+  { name: "MySQL", level: 88 },
+  { name: "REST APIs", level: 90 },
+  { name: "Firebase", level: 80 },
+  { name: "Git & GitHub", level: 88 },
+  { name: "Postman", level: 80 },
+];
 
   const soft = [
     { name: "Leadership", level: 90 },
@@ -463,43 +532,74 @@ export function SkillsSection({ scrollContainerRef }) {
 
 export function ProjectsSection() {
   const projects = [
+     {
+  title: "AirCare – AI Powered Hospital Air Quality Monitoring",
+  desc: "Built a full-stack AI-powered hospital air quality monitoring platform with a React dashboard, Spring Boot REST APIs, MySQL backend, Digital Twin simulation, and voice-enabled assistant for real-time monitoring across hospital OT, ICU, and ward environments.",
+  tech: [
+    "Java",
+    "Spring Boot",
+    "React",
+    "MySQL",
+    "REST APIs",
+    "Web Speech API",
+  ],
+  link: "https://github.com/Priti0903/AirCare",
+  demo: "https://aircare-ai-based-air-quality-monito.vercel.app/",
+  image: "/images/aircare.jpeg",
+},
+{
+  title: "Tourify – AI Travel Itinerary Planner",
+  desc: "Developed a full-stack travel itinerary planner supporting multi-day trip planning, destination tracking, weather updates, and AI-powered itinerary generation through REST APIs.",
+  tech: [
+    "Java",
+    "React",
+    "JavaScript",
+    "HTML5",
+    "CSS3",
+    "MySQL",
+    "REST APIs",
+    "Firebase",
+    "Gemini AI",
+  ],
+  link: "https://github.com/Priti0903/Tourify-The-Travel-Itinerary",
+  image: "/images/travel.jpeg",
+},
     {
-      title: "Bank Management System",
-      desc: "Built using Java & MySQL for managing customer accounts, transactions, and admin operations.",
-      tech: ["Java", "MySQL"],
-      link: "https://github.com/Priti0903/Projects",
-      image: "/images/bank-management.jpeg",
-    },
+  title: "Bank Management System",
+  desc: "Java desktop application simulating real banking operations including withdrawals, deposits, PIN change, fast cash, and transaction history using a MySQL backend.",
+  tech: [
+    "Java",
+    "MySQL",
+  ],
+  link: "https://github.com/Priti0903/Projects",
+  image: "/images/bank-management.jpeg",
+},
     {
-      title: "Online Doctor's Appointment System",
-      desc: "Developed with PHP, HTML, CSS, and MySQL. Users can book appointments and admins manage schedules.",
-      tech: ["PHP", "HTML", "CSS", "MySQL"],
-      link: "https://github.com/Priti0903/PHP-Doctor-Appointment-System",
-      image: "/images/doctor-appointment.jpeg",
-    },
+  title: "Online Doctor Appointment System",
+  desc: "Built a PHP-based healthcare management platform where patients can book appointments online while administrators manage doctors, schedules, and appointments.",
+  tech: [
+    "PHP",
+    "HTML",
+    "CSS",
+    "MySQL",
+  ],
+  link: "https://github.com/Priti0903/PHP-Doctor-Appointment-System",
+  image: "/images/doctor-appointment.jpeg",
+},
+
     {
-      title: "College Event Management",
-      desc: "Event management system with QR-based entry, built using PHP, HTML, CSS, and MySQL.",
-      tech: ["PHP", "HTML", "CSS", "MySQL"],
-      link: "https://github.com/Priti0903/College-Event-Management-System",
-      image: "/images/college-event.jpeg",
-    },
-    {
-      title: "Tourify – Travel Itinerary App",
-      desc: "AI-powered trip planning application with itinerary generation, weather updates, and destination management.",
-      tech: [
-        "React",
-        "Vite",
-        "JavaScript",
-        "Java",
-        "Firebase",
-        "Google Places API",
-        "OpenWeatherMap",
-        "Gemini AI",
-      ],
-      link: "https://github.com/Priti0903/Tourify-The-Travel-Itinerary",
-      image: "/images/travel.jpeg",
-    },
+  title: "College Event Management System",
+  desc: "Developed an event management platform with QR-code based entry management, participant registration, and admin controls using PHP and MySQL.",
+  tech: [
+    "PHP",
+    "HTML",
+    "CSS",
+    "MySQL",
+  ],
+  link: "https://github.com/Priti0903/College-Event-Management-System",
+  image: "/images/college-event.jpeg",
+},
+    
     {
       title: "Jewellery Website – Frontend",
       desc: "A modern, responsive jewellery website frontend built using HTML, CSS, JavaScript, and Bootstrap.",
@@ -508,6 +608,7 @@ export function ProjectsSection() {
       demo: "https://jewellery-website-frontend-eta.vercel.app/",
       image: "/images/jewellery.jpeg",
     },
+   
   ];
 
   return (
