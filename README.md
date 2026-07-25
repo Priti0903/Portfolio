@@ -43,6 +43,6 @@ It’s simple, responsive, and constantly evolving as I grow.
 git clone https://github.com/Priti0903/Portfolio.git
 cd Portfolio
 npm install
-npm run dev
+npm start
 
 
